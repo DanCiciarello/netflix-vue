@@ -45,12 +45,13 @@ export default {
         onSearchClick(){
             state.searchText = this.searchText;
             fetchData("movie");
+            fetchData("tv");
         },
     },
 
     // Mounted
     mounted() {
-        fetchData("movie");
+
     },
 
 }
