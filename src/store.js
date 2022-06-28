@@ -14,18 +14,20 @@ export const state = Vue.observable({
     // General
     moviesArray: [],
     seriesArray: [],
+    // Search
+    searchText: "",
 });
 
 // ------------------------------------------------
 
 // Functions
 
-export function fetchData(searchType, searchText) {
+export function fetchData(searchType) {
     axios.get(state.apiSearch + searchType, {
         params: {
             api_key: state.apiKey,
             language: state.apiLanguage,
-            query: searchText,
+            query: state.searchText,
         }
     })
     .then((resp) => {
