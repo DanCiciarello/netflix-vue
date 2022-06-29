@@ -38,3 +38,8 @@ export function fetchData(searchType) {
         }
     })
 }
+
+export function getVoteFullState(element){
+    const stars = Math.round(element / 2);
+    return stars;
+}

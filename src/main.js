@@ -3,6 +3,9 @@ import App from './App.vue';
 import "bootstrap";
 import "../src/assets/scss/main.scss";
 
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/js/all.js'
+
 Vue.config.productionTip = false
 
 new Vue({

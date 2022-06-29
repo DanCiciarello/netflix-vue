@@ -4,7 +4,7 @@
 
             <!-- Logo -->
             <div>
-                <span>Boolflix</span>
+                <span class="cdLogo">Boolflix</span>
             </div>
 
             <!-- Search bar -->
@@ -62,11 +62,22 @@ export default {
 <style lang="scss" scoped>
 
 @import "../assets/scss/variables";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .cdNavbar {
-    padding: 20px 0;
+    padding: 5px 0;
     background-color: $dark;
-    color: #FFFFFF
+    color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .cdLogo {
+        font-family: 'Bebas Neue', cursive;
+        color: red;
+        font-size: 50px;
+    }
 }
 
 </style>
