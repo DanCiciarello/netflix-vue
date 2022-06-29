@@ -37,7 +37,7 @@ export default {
         },
         getPosterUrl(id){
             if(this.movie.poster_path !== null) {
-                return ("https://image.tmdb.org/t/p/w185/" + id);
+                return ("https://image.tmdb.org/t/p/w342/" + id);
             } else {
                 return require("../assets/img/no_postthumb.jpeg");
             }
