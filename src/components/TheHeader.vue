@@ -59,10 +59,9 @@ export default {
 
 <!-- ------------------------------------------------ -->
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 @import "../assets/scss/variables";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .cdNavbar {
     padding: 5px 0;
@@ -72,6 +71,7 @@ export default {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 99;
 
     .cdLogo {
         font-family: 'Bebas Neue', cursive;

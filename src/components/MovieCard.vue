@@ -1,13 +1,23 @@
 <template>
-    <div>
-        <img :src="getPosterUrl(movie.poster_path)" :alt="'Image of' + movie.title" />
-        <p>Titolo: {{movie.title}}</p>
-        <p>Titolo originale: {{movie.original_title}}</p>
-        <p>Lingua originale: <img :src="getImageUrl(movie.original_language)" width="20" height="auto"/></p>
-        <span class="pe-2">Voto:</span>
-        <i v-for="(star, i) in getVote(movie.vote_average, 'full')" :key="i" class="fa-solid fa-star"></i>
-        <i v-for="(star, i) in getVote(movie.vote_average, 'empty')" :key="i + 5" class="fa-regular fa-star"></i>
-        <hr>
+    <div class="cdCardContainer mb-3">
+        <div class="cdPosterImage">
+            <img :src="getPosterUrl(movie.poster_path)" :alt="'Image of' + movie.title" />
+        </div>
+        <div class="cdCardInfo">
+            <span class="cdCardTitle">Titolo:</span>
+            <p>{{movie.title}}</p>
+            <div v-if="movie.title !== movie.original_title">
+                <span class="cdCardTitle">Titolo originale:</span>
+                <p>{{movie.original_title}}</p>
+            </div>
+            <span class="cdCardTitle">Lingua originale:</span>
+            <p><img :src="getImageUrl(movie.original_language)" width="20" height="auto"/></p>
+            <span class="cdCardTitle">Voto:</span>
+            <p>
+                <i v-for="(star, i) in getVote(movie.vote_average, 'full')" :key="i" class="fa-solid fa-star"></i>
+                <i v-for="(star, i) in getVote(movie.vote_average, 'empty')" :key="i + 5" class="fa-regular fa-star"></i>
+            </p>
+        </div>
     </div>
 </template>
 

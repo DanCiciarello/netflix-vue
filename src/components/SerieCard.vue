@@ -1,13 +1,18 @@
 <template>
     <div>
-        <img :src="getPosterUrl(serie.poster_path)" :alt="'Image of' + serie.name" />
-        <p>Titolo: {{serie.name}}</p>
-        <p>Titolo originale: {{serie.original_name}}</p>        
-        <p>Lingua originale: <img :src="getImageUrl(serie.original_language)" width="20" height="auto"/></p>
-        <span class="pe-2">Voto:</span>
-        <i v-for="(star, i) in getVote(serie.vote_average, 'full')" :key="i" class="fa-solid fa-star"></i>
-        <i v-for="(star, i) in getVote(serie.vote_average, 'empty')" :key="i + 5" class="fa-regular fa-star"></i>
-        <hr>
+        <div class="cdCardContainer mb-3">
+            <div class="cdPosterImage">
+                <img :src="getPosterUrl(serie.poster_path)" :alt="'Image of' + serie.name" class="cdPosterImage" />
+            </div>
+            <div class="cdCardInfo">
+                <p>Titolo: {{serie.name}}</p>
+                <p>Titolo originale: {{serie.original_name}}</p>        
+                <p>Lingua originale: <img :src="getImageUrl(serie.original_language)" width="20" height="auto"/></p>
+                <span class="pe-2">Voto:</span>
+                <i v-for="(star, i) in getVote(serie.vote_average, 'full')" :key="i" class="fa-solid fa-star"></i>
+                <i v-for="(star, i) in getVote(serie.vote_average, 'empty')" :key="i + 5" class="fa-regular fa-star"></i>
+            </div>
+        </div>
     </div>
 </template>
 
